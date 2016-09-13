@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
   <title>文章目录</title>
+  <link rel="stylesheet" href="css/reader.css">
+  <script src="./js/zepto.min.js"></script>
 </head>
 <body>
+  <div class="banner"></div>
+  <div class="booklist">
+    <!-- <p class="book-name">藏海花第一卷</p>
+    <span><a href="" class="bookchapter">第一章</a></span>
+    <span><a href="" class="bookchapter">第一章</a></span>
+    <span><a href="" class="bookchapter">第一章</a></span> -->
+  </div>
+  <script>
+  var chapters_list = [];
+  var names = ['藏海花第一卷','藏海花第二卷','沙海第一卷','沙海第二卷','沙海第三卷','沙海第四卷','三叔微信短篇'];
+  var booklistContainer = $('.booklist');
+  $.getJSON('zanghaihua/book.json',function(data) {
+    chapters_list = data.chapters;
+    console.log(chapters_list);
+    appendChapters();
+  });
 
+  function appendChapters() {
+    for(var i=0;i<chapters_list.length;i++) {
+      var chapterHtml = '<span><a href="/reader.html?book=zanghaihua&chapter=' + i + '" class="bookchapter">' + chapters_list[i].title + '</a></span>';
+      booklistContainer.append(chapterHtml);
+      console.log(chapterHtml);
+    }
+  }
+
+  function appendNames() {
+    var bookNameHtml = '<p class="book-name"></p>';
+  }
+
+  </script>
 </body>
 </html>

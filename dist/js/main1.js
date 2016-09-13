@@ -58,10 +58,10 @@ $(function() {
     addHistory(book,parseInt(chapter)-1);
   });
 
-  $('.chapter_btn').on('click',function() {
-    console.log(chapter_info);
-    window.scrollTo(0,0);
-  });
+  // $('.chapter_btn').on('click',function() {
+  //   console.log(chapter_info);
+  //   window.scrollTo(0,0);
+  // });
 
   $('.post_chapter_btn').on('click',function() {
     console.log(post_chapter_info);
