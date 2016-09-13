@@ -16,7 +16,7 @@ function getQueryStringByName(name) {
 }
 
 function addHistory(book,chapter) {
-  history.pushState({"chapter":chapter},'','/reader.html?book=' + book + '&chapter=' + chapter + '');
+  history.pushState({"chapter":chapter},'','./reader.html?book=' + book + '&chapter=' + chapter + '');
   reset();
   window.scrollTo(0,0);
 }
