@@ -27,7 +27,7 @@
 
   function appendChapters() {
     for(var i=0;i<chapters_list.length;i++) {
-      var chapterHtml = '<span><a href="/reader.html?book=zanghaihua&chapter=' + i + '" class="bookchapter">' + chapters_list[i].title + '</a></span>';
+      var chapterHtml = '<span><a href="./reader.html?book=zanghaihua&chapter=' + i + '" class="bookchapter">' + chapters_list[i].title + '</a></span>';
       booklistContainer.append(chapterHtml);
       console.log(chapterHtml);
     }
